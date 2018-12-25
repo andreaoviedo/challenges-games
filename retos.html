@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Retos Familia</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    .smallerfont{
+      font-size:60px;
+    }
+  </style>
+  <link rel="icon" type="image/png" href="https://i1.wp.com/emmerichtreefarm.com/wp-content/uploads/2014/08/1409430253_christmas_33.png?fit=256%2C256&ssl=1" > 
+</head>
+<body>
+  <div class="container">
+  <div class="text-center" style="margin-top: 50px;" >
+    <h1 id="answer" style="font-size: 80px">Retos para jugar en familia</h1> 
+    <div id="volver"></div> 
+  </div>
+</div>
+</body>
+</html>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+var ar = new Array(18)
+ar[0] = "Cuenta un chiste"
+ar[1] = "Múltiplos de 7"
+ar[2] = "Di el siguiente trabalenguas: <div class='smallerfont'><br><br>El rey de parangaricutirimicuaro <br>se quiere desparangaricutirimicuar <br>el que lo desenparangaricutirimicue <br>un gran desparangaricutirimicuador será</div>"
+ar[3] = "Cámbiale el regalo que quieras a la persona de la derecha"
+ar[4] = "Cámbiale el regalo que quieras a la persona de la izquierda"
+ar[5] = "Haz 5 sentadillas lo más rápido que puedas"
+ar[6] = "¿Qué falta?"
+ar[7] = "Di 10 palabras que empiecen y terminen con A en 30 segundos"
+ar[8] = "Juega piedra, papel o tijera con el número " + randommember() + ". El que gane 2 de 3 le roba un regalo al otro"
+ar[9] = "Palabras encadenadas"
+ar[10] = "Quítale un regalo a la persona que más regalos tenga"
+ar[11] = "Quítale un regalo al número "  + randommember()
+ar[12] = "Dale un regalo a la persona de la derecha"
+ar[13] = "Dale un regalo a la persona de la izquierda"
+ar[14] = "Dale un regalo al número "  + randommember()
+ar[15] = "Canta villancicos navideños con la nariz tapada por 30 segundos"
+ar[16] = "El baúl del abuelo (en orden alfabético)"
+ar[17] = "De la Habana ha venido un barco cargado de..."
+
+function getMessage() {
+  var index = Math.floor(Math.random() * ar.length)
+  var answer = ar[index]
+  document.getElementById("answer").innerHTML = answer
+  if (ar.length==0){
+    document.getElementById("answer").innerHTML = "¡Terminaron!"
+    document.getElementById("volver").innerHTML = "<button class='btn btn-primary btn-lg' onclick='location.reload();'>Volver a empezar</button>"
+  }
+  ar.splice(index, 1)
+}
+
+function randommember(){
+  return Math.floor(Math.random() * 7) + 1
+}
+  
+document.body.onkeyup = function(e){
+    if(e.keyCode == 32){
+        getMessage()
+    }
+}
+
+  
+  
+//-->
+</SCRIPT>
+
+

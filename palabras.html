@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Palabras navideñas</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="icon" type="image/png" href="https://i1.wp.com/emmerichtreefarm.com/wp-content/uploads/2014/08/1409430253_christmas_33.png?fit=256%2C256&ssl=1" > 
+  <style>
+    .smallerfont{
+      font-size:60px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <div class="text-center" style="margin-top: 50px;" >
+    <h1 id="answer" style="font-size: 80px">Palabras navideñas</h1> 
+    <div id="volver"></div> 
+  </div>
+</div>
+</body>
+</html>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+var ar = new Array()
+ar = ["ponche", "esfera", "árbol", "caramelo", "pavo", "reyes magos", "Santa Claus", "familia", "renos", "cascanueces", "duendes", "Jesús", "campanas", "regalo", "listón", "adornos", "moño", "carbón", "pino", "Polo Norte", "chimenea", "oro", "incienso", "mirra", "nacimiento", "bufanda", "suéter", "guantes", "celebrar", "envolver", "romeritos", "bacalao", "nochebuena", "pesebre", "pastores", "fiesta", "listón", "Belén", "luces", "villancicos", "muñeco de nieve", "trineo", "estrella", "bengala", "carta", "comida", "vela", "sidra"]
+
+function getMessage() {
+  console.log(ar);
+  var index = Math.floor(Math.random() * ar.length)
+  var answer = ar[index]
+  document.getElementById("answer").innerHTML = answer
+  if (ar.length==0){
+    document.getElementById("answer").innerHTML = "¡Terminaron!"
+    document.getElementById("volver").innerHTML = "<button class='btn btn-primary btn-lg' onclick='location.reload();'>Volver a empezar</button>"
+  }
+  ar.splice(index, 1)
+}
+
+function randommember(){
+  return Math.floor(Math.random() * 6) + 1
+}
+  
+document.body.onkeyup = function(e){
+    if(e.keyCode == 32){
+        getMessage()
+    }
+}
+
+  
+  
+//-->
+</SCRIPT>
+
+
